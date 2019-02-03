@@ -73,17 +73,30 @@ c;a?(e.title||(e.title=a.replace(/^.*[\\\/]/,"")),e.documentUrl=a,b(a,function(b
 "style");k.setAttribute("media","only screen and (max-device-width: 800px) and (max-device-height: 800px)");k.setAttribute("type","text/css");k.setAttribute("viewerTouch","1");k.appendChild(document.createTextNode(viewerTouch_css));document.head.appendChild(k)})();
 
 //]]>
+
+function personalise() {
+  // delete download button
+  var element = document.getElementById("download");
+  element.parentNode.removeChild(element);
+  
+  // delete fullscreen button
+  var element = document.getElementById("fullscreen");
+  element.parentNode.removeChild(element);
+  
+  // hide right toolbar
+  document.getElementById("toolbarRight").style.visibility = "hidden";
+}
         </script>
     </head>
 
-    <body>
+    <body onload = "personalise()">
         <div id = "viewer">
             <div id = "titlebar">
                 <div id = "documentName"></div>
                 <div id = "titlebarRight">
                     <button id = "presentation" class = "toolbarButton presentation" title = "Presentation"></button>
                     <button id = "fullscreen" class = "toolbarButton fullscreen" title = "Fullscreen"></button>
-                    <!--<button id = "download" class = "toolbarButton download" title = "Download"></button>-->
+                    <button id = "download" class = "toolbarButton download" title = "Download"></button>
                 </div>
            </div>
             <div id = "toolbarContainer">
