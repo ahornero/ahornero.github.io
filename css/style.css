@@ -146,8 +146,10 @@ a:hover {
 	-webkit-border-radius: 5px; 
 }
 
-
-
 .hidden {
 	display: none;
+}
+
+#SonetelWidget input {
+	color: black !important;
 }
