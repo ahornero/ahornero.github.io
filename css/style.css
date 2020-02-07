@@ -114,6 +114,10 @@ a:hover {
 	list-style-type: none;
 }
 
+#SonetelWidget {
+	display: none !important;
+}
+
 #content {
 	width: 100%;
 	float: left;
